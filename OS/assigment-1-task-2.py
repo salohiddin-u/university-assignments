@@ -14,9 +14,7 @@ def deposit(amount):
     print(f"Deposited: {amount} | Balance: {balance}")
 
 def withdraw(amount):
-
     global balance
-
     if balance >= amount:
         balance -= amount
         print(f"Withdrawn: {amount} | Balance: {balance}")
