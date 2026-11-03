@@ -1,0 +1,11 @@
+import socket
+
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client_socket.connect(('localhost', 8080))
+
+client_socket.send("Hello, Server!".encode())
+
+response = client_socket.recv(1024).decode()
+print(f"Received from server: {response}")
+
+client_socket.close()
